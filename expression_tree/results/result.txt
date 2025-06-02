@@ -1,0 +1,92 @@
+
+
+----------New Expression-----------
+Postfix:
+	+
+Error: Missing operand/s for '+'
+
+
+----------New Expression-----------
+Postfix:
+	2 3 5 * + 9 -
+
+Binary Tree:
+'--[-]
+    |--[+]
+    |   |--[2]
+    |   '--[*]
+    |       |--[3]
+    |       '--[5]
+    '--[9]
+
+Infix:
+	2 + 3 * 5 - 9 
+Prefix:
+	- + 2 * 3 5 9 
+Result: 8
+
+
+----------New Expression-----------
+Postfix:
+	F A B L E * - / +
+
+Binary Tree:
+'--[+]
+    |--[F]
+    '--[/]
+        |--[A]
+        '--[-]
+            |--[B]
+            '--[*]
+                |--[L]
+                '--[E]
+
+Infix:
+	F + A / B - L * E 
+Prefix:
+	+ F / A - B * L E 
+Result: 69
+
+
+----------New Expression-----------
+Postfix:
+	10 99 33 / 5 167 * - +
+
+Binary Tree:
+'--[+]
+    |--[10]
+    '--[-]
+        |--[/]
+        |   |--[99]
+        |   '--[33]
+        '--[*]
+            |--[5]
+            '--[167]
+
+Infix:
+	10 + 99 / 33 - 5 * 167 
+Prefix:
+	+ 10 - / 99 33 * 5 167 
+Result: -826
+
+
+----------New Expression-----------
+Postfix:
+	F A B L - / E * + S
+Error: Invalid expression 'S'
+
+
+----------New Expression-----------
+Postfix:
+	FB FA +
+
+Binary Tree:
+'--[+]
+    |--[FB]
+    '--[FA]
+
+Infix:
+	FB + FA 
+Prefix:
+	+ FB FA 
+Result: 140
